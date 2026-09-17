@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "客户维度表（清洗标准化）"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_product
+    description: "商品维度表（类目标准化+毛利）"
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+      - name: gross_margin_pct
+        tests:
+          - not_null
+
+  - name: fact_order_detail
+    description: "订单事实明细（订单+明细+支付+物流四表关联）"
+    columns:
+      - name: item_id
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        tests:
+          - not_null

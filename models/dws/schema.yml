@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: dws_customer_stats
+    description: "客户主题汇总宽表"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dws_category_stats
+    description: "类目主题汇总"

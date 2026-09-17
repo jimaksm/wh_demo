@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: ads_daily_gmv_report
+    description: "每日 GMV 报表"
+
+  - name: ads_top_customers
+    description: "TOP 客户榜单"
